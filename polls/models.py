@@ -52,11 +52,6 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
 
-    def clean(self):
-        if (self.question_type in ['CHOICE', 'MULTICHOICE'] and
-                not self.question_choice.exists()):
-            raise ValidationError('Создайте хотя бы один вариант ответа')
-
 
 class QuestionChoice(models.Model):
     question = models.ForeignKey(Question,
@@ -77,7 +72,7 @@ class QuestionChoice(models.Model):
         return self.choice_text
 
     def clean(self):
-        if self.question.question_type not in ['CHOICE', 'MULTICHOICE']:
+        if self.question.question_type in ['TEXT']:
             raise ValidationError('Нельзя создать вариант ответа '
                                   'для вопроса с типом ответа "TEXT"')
 
