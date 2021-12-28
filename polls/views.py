@@ -84,6 +84,7 @@ class UserAnswerView(views.APIView):
             id__in=Answer.objects.filter(user_id=user_id).values('poll'))
         for poll in poll_queryset:
             poll_info = {'poll_id': poll.id,
+                         'poll_title': poll.title,
                          'poll_description': poll.description,
                          'user_answers': []}
             for answer in Answer.objects.filter(user_id=user_id, poll=poll.id):
