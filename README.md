@@ -51,7 +51,11 @@ Django 2.2.10, Django REST framework
 
 ```winpty python manage.py createsuperuser```
 
-8. **Запустите сервер**
+8. **Запустите тесты**
+
+```python manage.py test tests```
+
+9. **Запустите сервер**
 
 ```python manage.py runserver```
 
