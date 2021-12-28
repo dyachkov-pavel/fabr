@@ -124,8 +124,7 @@ Vary: Accept
 
 ### POST /api/v1/admin/polls/{poll_id}/questions/
 
-**Создать вопрос**
-
+**Создать вопрос**\
 ***Пример запроса для вопроса с типом TEXT***
 ```
 {
@@ -217,8 +216,28 @@ Vary: Accept
     ]
 }
 ```
-***Замечание: при обновлении вариантов ответа, старые варианты удаляются***
+### PATCH /api/v1/admin/polls/{poll_id}/questions/{pk}
+**Частично изменить вопрос**
 
+***Пример запроса***
+```
+{
+    "question_text": "Как у Вас дела?", # string
+}
+```
+***Тело ответа***\
+HTTP 200 OK\
+Allow: PUT, PATCH, DELETE, OPTIONS\
+Content-Type: application/json\
+Vary: Accept
+```
+{
+    "question_id": 1,
+    "question_text": "Как у Вас дела?",
+    "question_type": "TEXT",
+    "question_choice": []
+}
+```
 ### DELETE /api/v1/admin/polls/{poll_id}/questions/{pk}
 **Удалить вопрос**
 
