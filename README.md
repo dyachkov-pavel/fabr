@@ -19,45 +19,69 @@ Django 2.2.10, Django REST framework
 ## Инструкция по разворачиванию приложения
 1. **Склонируйте репозиторий**
 
-```git clone https://github.com/dyachkov-pavel/fabr.git ```
+```
+git clone https://github.com/dyachkov-pavel/fabr.git
+```
 
 2. **Перейдите в директорию fabr**
 
-```cd fabr```
+```
+cd fabr
+```
 
 3. **Создайте и активируйте виртуальное окружение**
 
-```python -m venv venv```
+```
+python -m venv venv
+```
 
-```source venv/Scripts/activate```
+```
+source venv/Scripts/activate
+```
 
 4. **Установите зависимости**
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 5. **Примените миграции**
 
-```python manage.py makemigrations```
+```
+python manage.py makemigrations
+```
 
-```python manage.py makemigrations polls```
+```
+python manage.py makemigrations polls
+```
 
-```python manage.py migrate```
+```
+python manage.py migrate
+```
 
 6. **По желанию, можете заполнить базу начальными данными**
 
-```python manage.py loaddata fixtures.json```
+```
+python manage.py loaddata fixtures.json
+```
 
 7. **Создайте супер юзера**
 
-```winpty python manage.py createsuperuser```
+```
+winpty python manage.py createsuperuser
+```
 
 8. **Запустите тесты**
 
-```python manage.py test tests```
+```
+python manage.py test tests
+```
 
 9. **Запустите сервер**
 
-```python manage.py runserver```
+```
+python manage.py runserver
+```
 
 # API для опроса пользователей
 ## Эндпоинты для админа
