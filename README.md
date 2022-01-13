@@ -307,6 +307,7 @@ Vary: Accept
 
 ### POST /api/v1/polls/{poll_id}/answer/
 **Создать ответ на вопрос**
+
 ***Пример запроса если вопрос типа текст***
 ```
 
@@ -379,7 +380,7 @@ Vary: Accept
             {
                 "question_id": 3,
                 "question_type": "CHOICE",
-                "question_text": "Укажите ваш пол?",
+                "question_text": "Сколько вам лет?",
                 "answer_text": "",
                 "choice": "Больше 18"
             },
